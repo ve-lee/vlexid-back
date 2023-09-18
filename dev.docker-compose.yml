@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  vlexid-back:
+    image: node:lts
+    container_name: vlexid-back
+    volumes:
+      - .:/git/vlexid-back
+    env_file:
+      - .env
+    command:
+      - /bin/sh
+      - -c
+      - |
+        cd /git/VLExId
